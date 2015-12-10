@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<!-- https://www.youtube.com/watch?v=mI7p4Y2wouA -->
+  <meta charset="UTF-8">
+  <title>Things to do</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js"></script>
+  <script src="./js/app_todo.js"></script>
+</head>
+<body class="well" ng-init="names=['one','two','three']">
+
+<h1>ANGULAR JS</h1>
+
+<button onclick="showiFrames()"></button>
+
+<div width="100%" class="iframes">
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/mI7p4Y2wouA" frameborder="0" allowfullscreen></iframe>
+
+<a href="https://www.youtube.com/watch?v=i9MHigUZKEM">Angular Lesson (60 mins)</a>
+  <iframe width="420" heigth="210" src="" frameborder="0"></iframe>
+
+</div>
+
+
+
+<div class="container">
+<!-- THE HELLO WORLD -->
+  <div>
+    {{ 'World' | greet}}
+  </div>
+  
+
+  <!-- NG-REPEAT WITH FILTER -->
+  <ul>
+    <li ng-repeat="name in names">{{name}}</li>
+  </ul>
+
+
+  <!-- PRINTING AS YOU TYPE -->
+  <br/>
+  <input type="text" ng-model="input"> <h1>  {{ input }} </h1>
+
+
+  <!-- {{ input }} -->
+
+
+  <!-- USING A FILTER -->
+  <div ng-init="peeps=[{name:'Jon Doe',city:'Phoenix'}, {name:'Jon Deere',city:'Denver'},{name:'Jon Stewart',city:'New York'},{name:'Jon Oliver',city:'London'},{name:'Jon Sena',city:'Birmingham'},{name:'Jon Major',city:'Atlanta'},{name:'Jon Butcher',city:'Dallas'},{name:'Jon Attica',city:'Providence'},{name:'Jon Jacob',city:'Seattle'},{name:'Jon Buchanan',city:'Trenton'}]">
+    <ul>
+      <li ng-repeat="peep in peeps | orderBy:'name'">
+        {{ peep.name | uppercase }} --- {{peep.name | lowercase }} --- {{ peep.name | limitTo:3 }}
+      </li>
+    </ul>
+    <input type="text" ng-model="searchInput">
+    <ul>
+      <li ng-repeat="peep in peeps | filter:searchInput | orderBy:'name'">
+        {{ peep.name }} - {{ peep.city }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+<script>
+  i = 0;
+  function showiFrames(){
+      
+    if(i===0){
+    console.log("1",i);
+      $('.iframes').show();
+
+    } else {
+
+      $('.iframes').hide();
+
+    }
+   
+      // $('.iframes').show();
+      console.log("2",i);
+    i = (i === 0 ? 1 : 0);
+      console.log("3",i);
+  }
+</script>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "angularapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "Hello Sheeple"
+  },
+  "repository": {
+    "type": "git",
+    "url": "angular"
+  },
+  "author": "Popsicle",
+  "license": "ISC"
+}

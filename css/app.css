@@ -1,0 +1,12 @@
+h1 {
+  color:red;
+}
+.iframes {
+  display:none;
+  border:4px solid #7D7D7D;
+  border-radius: 3px;
+  padding:10px;
+}
+.printType {
+  display:inline-block;
+}
