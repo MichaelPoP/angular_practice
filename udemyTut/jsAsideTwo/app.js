@@ -5,12 +5,11 @@ var person = function(firstname, lastname){
 
 
 }
-
-function logPerson(){
-
-	var john = new person('john', 'doe');
-	console.log(john);
+//exmaple of dependency injection
+function logPerson(person){
+	
+	console.log(person);
 
 }
-
-logPerson();
+var john = new person('john', 'doe');
+logPerson(john);
