@@ -1,3 +1,3 @@
 var person = 'Mike';
 
-logPerson();
+stevesApp.logPerson();
