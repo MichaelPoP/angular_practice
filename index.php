@@ -30,54 +30,33 @@
 </head>
 <body>
     <center>
-	<h1 class="headline">--- LEADQUIZ QUIZ NETWORK ---</h1>
+	<h1 class="headline">--- ALL ANGULAR APPS ---</h1>
     <div class="col-md-4">
-        <h3>Root Directories</h3>
-        <?php 
-
-    $dir = '.';
-
-    $files = scandir($dir, 0);
-    foreach ($files as $value) {
-        if (is_dir($value) === TRUE){
-
-            echo "<a  class='dir glyphicon glyphicon-folder-close' href=./" . $value . ">  " . $value . "</a><br>";
-
-        } else {
-
-            echo "<a  class='dir glyphicon glyphicon-file' href=./" . $value . ">  " . $value . "</a><br>";
-
-        }
-        // print_r($value);
-        
-    }
-    // echo $files;
-
-?>
 
     </div>
     <div class="list col-md-4">
 
-<?php 
+    <?php 
 
-	$dir = './quiz';
+	    $dir = '.';
 
-	$files = scandir($dir, 0);
-	foreach ($files as $value) {
-		// print_r($value);
-        if (is_dir($value) == TRUE){ 
+	    $files = scandir($dir, 0);
+	    foreach ($files as $value) {
+	        if (is_dir($value) === TRUE){
 
-		  echo "<a  class='dir glyphicon glyphicon-folder-close' href=./" . $value . ">  " . $value . "</a><br>";
+	            echo "<a  class='dir glyphicon glyphicon-folder-close' href=./" . $value . ">  " . $value . "</a><br>";
 
-        } else {
+	        } else {
 
-          echo "<a  class='dir glyphicon glyphicon-file' href=./quiz/" . $value . ">  " . $value . "</a><br>";
-          
-        }
-	}
-	// echo $files;
+	            echo "<a  class='dir glyphicon glyphicon-file' href=./" . $value . ">  " . $value . "</a><br>";
 
-?>
+	        }
+	        // print_r($value);
+	        
+	    }
+	    // echo $files;
+
+    ?>
     </div>
     <div class="col-md-4"></div>
 	</center>
